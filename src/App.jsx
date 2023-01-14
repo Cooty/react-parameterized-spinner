@@ -4,7 +4,7 @@ import Spinner from "./components/spinner/Spinner";
 function App() {
   return (
     <div className="App">
-      <Spinner />
+      <Spinner size="80px" color="rgb(255, 0, 0)" />
     </div>
   );
 }

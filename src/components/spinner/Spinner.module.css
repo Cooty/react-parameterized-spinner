@@ -8,7 +8,6 @@
 }
 
 .spinner {
-  --spinner-size: 40px;
   width: var(--spinner-size);
   height: var(--spinner-size);
   display: inline-block;
@@ -23,7 +22,7 @@
   position: absolute;
   width: var(--spinner-inner-size);
   height: var(--spinner-inner-size);
-  border: var(--spinner-border-width) solid rgb(39, 39, 158);
+  border: var(--spinner-border-width) solid var(--spinner-color);
   border-top-color: transparent;
   border-radius: 50%;
 }
