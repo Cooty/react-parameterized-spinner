@@ -8,25 +8,31 @@
 }
 
 .spinner {
-  width: 40px;
-  height: 40px;
+  --spinner-size: 40px;
+  width: var(--spinner-size);
+  height: var(--spinner-size);
   display: inline-block;
   overflow: hidden;
 }
 
 .spinnerAnimationContainer div {
+  --spinner-border-width: calc(var(--spinner-size) * 0.1);
+  --spinner-inner-size: calc(
+    var(--spinner-size) / 2 + var(--spinner-border-width)
+  );
   position: absolute;
-  width: 24px;
-  height: 24px;
-  border: 4px solid rgb(39, 39, 158);
+  width: var(--spinner-inner-size);
+  height: var(--spinner-inner-size);
+  border: var(--spinner-border-width) solid rgb(39, 39, 158);
   border-top-color: transparent;
   border-radius: 50%;
 }
 
 .spinnerAnimationContainer div {
+  --spinner-offset: calc(var(--spinner-size) / 2);
   animation: spin 1s linear infinite;
-  top: 20px;
-  left: 20px;
+  top: var(--spinner-offset);
+  left: var(--spinner-offset);
 }
 
 .spinnerAnimationContainer {
